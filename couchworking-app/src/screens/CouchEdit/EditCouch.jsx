@@ -18,7 +18,8 @@ export default function CouchEdit() {
   useEffect(() => {
     const fetchCouch = async () => {
       const res = await axios.get(`https://couch-working.herokuapp.com/couch-api/couch/${id}`);
-      setInput(res.data.couch);
+      console.log(res)
+      setInput(res.data);
     };
     fetchCouch();
   }, [id]);
