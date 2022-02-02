@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom"
-import CouchList from "./components/CouchList/CouchList";
+import CouchList from "./screens/CouchList/CouchList";
 
 import './App.css';
 
