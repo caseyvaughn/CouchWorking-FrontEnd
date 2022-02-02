@@ -1,6 +1,7 @@
 import axios from "axios"
 // import api from "../services/apiConfig"
 import { useState, useEffect } from "react"
+import { Link } from "react-router-dom"
 const baseURL = "https://couch-working.herokuapp.com/"
 
 export default function CouchList() {
@@ -21,7 +22,9 @@ export default function CouchList() {
         {couches.map((couch) => {
           return (
             <li key={couch._id}> 
-              <h1>{couch.title}</h1>
+              <Link to={`/couch/${couch._id}`}>
+                <h1>{couch.title}</h1>
+              </Link>
               <img src={couch.image_URL} alt={couch.title}/>
               <h3>{couch.location}</h3>
               <p>{couch.description}</p>
