@@ -3,22 +3,21 @@ import { NavLink } from 'react-router-dom';
 
 const userLinks = (
     <div>
-        <NavLink className="link" to ="/">Create a Post</NavLink>
+        <NavLink className="link" to ="/create">Create a Post</NavLink>
         <NavLink className="link" to ="/">Sign Out</NavLink>
     </div>
 )
 
 const newUserLinks = (
     <div>
-        <NavLink className="link" to ="/">Sign Up</NavLink>
-        <NavLink className="link" to ="/">Sign In</NavLink>
-        
+        <NavLink className="link" to ="/sign-up">Sign Up</NavLink>
+        <NavLink className="link" to ="/sign-in">Sign In</NavLink>   
     </div>
 )
 
 const allLinks = (
     <div>
-        <NavLink className="link" to ="/">View Listings</NavLink>
+        <NavLink className="link" to ="/couches">View Listings</NavLink>
     </div>
 )
 
