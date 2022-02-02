@@ -16,7 +16,6 @@ export default function CouchDetail() {
     fetchCouch();
   }, [])
 
-
   ///add if block for if couch does not exist
 
   return (

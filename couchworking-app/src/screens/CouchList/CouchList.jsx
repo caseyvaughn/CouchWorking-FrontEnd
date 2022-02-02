@@ -1,5 +1,4 @@
 import axios from "axios"
-// import api from "../services/apiConfig"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 const baseURL = "https://couch-working.herokuapp.com/"
