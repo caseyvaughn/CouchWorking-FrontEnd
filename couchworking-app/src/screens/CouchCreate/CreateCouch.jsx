@@ -13,8 +13,8 @@ const default_input = {
 
 export default function CreateCouch() {
     const [input, setInput] = useState(default_input);
-    let navigate = useNavigate();
-
+  let navigate = useNavigate();
+  
     const handleTextInput = (event) =>{
         const {id, value} = event.target;
         setInput((prevInput)=>({
@@ -27,6 +27,7 @@ export default function CreateCouch() {
     event.preventDefault();
     const fields = input;
     const res = await axios.post(`https://couch-working.herokuapp.com/couch-api/create`, fields);
+    console.log(res);
     setInput(default_input);
     navigate("/create");
   }
