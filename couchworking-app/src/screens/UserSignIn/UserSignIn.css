@@ -1,0 +1,13 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.fieldset1 {
+  width: 200px;
+  background-color: rgb(231, 219, 240);
+}
+
+.legend1 {
+  text-align: left;
+}
