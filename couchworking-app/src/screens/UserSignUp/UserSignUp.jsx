@@ -16,7 +16,7 @@ const UserSignUp = () => {
   const [newUser, setNewUser] = useState(default_User);
   const navigate = useNavigate();
 
-  handleTextInput = (e) => {
+  const handleTextInput = (e) => {
     const {id, value} = e.target;
     setNewUser((prevUser) => ({
       ...prevUser,
@@ -26,33 +26,77 @@ const UserSignUp = () => {
 
   const handleSubmit = async (e) => {
     e.prventDefault();
-    await axios.post(baseURL, newUser);
+    await axios({
+      method: "post",
+      url: `${baseURL}user-api/sign-up`,
+      data: newUser,
+    })
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    // await axios.post(`${baseURL}user-api/sign-up`, newUser);
+    navigate("/");
   };
 
   return (
     <div>
-      <form>
-        <input
-          id="username"
-          value={newUser.username}
-          placeholder="Username"
-        ></input>
-        <input
-          id="firstName"
-          value={newUser.firstName}
-          placeholder="First Name"
-        ></input>
-        <input
-          id="lastName"
-          value={newUser.lastName}
-          placeholder="Last Name"
-        ></input>
-        <input id="email" value={newUser.email} placeholder="Email"></input>
-        <input
-          id="password"
-          value={newUser.password}
-          placeholder="Password"
-        ></input>
+      <form
+        onSubmit={(e) => {
+          handleSubmit(e);
+        }}
+      >
+        <fieldset>
+          <legend>Sign Up</legend>
+          <input
+            id="username"
+            value={newUser.username}
+            placeholder="Username"
+            onChange={(e) => {
+              handleTextInput(e);
+            }}
+          ></input>
+          <br />
+          <input
+            id="firstName"
+            value={newUser.firstName}
+            placeholder="First Name"
+            onChange={(e) => {
+              handleTextInput(e);
+            }}
+          ></input>
+          <br />
+          <input
+            id="lastName"
+            value={newUser.lastName}
+            placeholder="Last Name"
+            onChange={(e) => {
+              handleTextInput(e);
+            }}
+          ></input>
+          <br />
+          <input
+            id="email"
+            value={newUser.email}
+            placeholder="Email"
+            onChange={(e) => {
+              handleTextInput(e);
+            }}
+          ></input>
+          <br />
+          <input
+            id="password"
+            value={newUser.password}
+            placeholder="Password"
+            onChange={(e) => {
+              handleTextInput(e);
+            }}
+          ></input>
+          <br />
+          <button>Submit</button>
+        </fieldset>
       </form>
     </div>
   );
