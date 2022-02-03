@@ -25,20 +25,21 @@ const UserSignUp = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.prventDefault();
+    e.preventDefault();
     await axios({
       method: "post",
       url: `${baseURL}user-api/sign-up`,
       data: newUser,
     })
       .then((response) => {
+        navigate("/");
         return response.data;
       })
       .catch((error) => {
         console.log(error);
+        navigate("/");
       });
     // await axios.post(`${baseURL}user-api/sign-up`, newUser);
-    navigate("/");
   };
 
   return (

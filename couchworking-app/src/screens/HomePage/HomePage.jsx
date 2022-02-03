@@ -1,8 +1,8 @@
 
-import './Home.css';
-import Display from '../../Display/Display'
+import './HomePage.css';
+import Display from '../../components/Display/Display';
 
-export default function HomePage() {
+export default function HomePage(props) {
 
   return (
     <div>
