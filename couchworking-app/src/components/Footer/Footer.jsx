@@ -6,27 +6,29 @@ const Footer = () => {
 
         <footer>
             <div className="footer-container">
-                <h2>Contact Us</h2>
-                <div className="github">
-                    <img></img> 
-                    <div className="github-links">
-                        <a href="/">Trung</a>
-                        <a href="/">Casey</a>
-                        <a href="/">Tim</a>
-                        <a href="/">Blake</a>
-                    </div>
-                </div>
-                <div className="linkedin">
-                    <img></img>
-                    <div className="linkedin-links">
-                        <a href="/">Trung</a>
-                        <a href="/">Casey</a>
-                        <a href="/">Tim</a>
-                        <a href="/">Blake</a>
-                    </div>
+                <div className="container">
+                    <div className="row">
+                        <div className="column">
+                            <img></img>
+                            <ul className="list">
+                                <li><a href="/">Trung</a></li>
+                                <li><a href="/">Casey</a></li>
+                                <li><a href="/">Tim</a></li>
+                                <li> <a href="/">Blake</a></li>
+                            </ul>
+                        </div>
+                        <div className="column">
+                            <img></img>
+                            <ul className="list">
+                                <li><a href="/">Trung</a></li>
+                                <li><a href="/">Casey</a></li>
+                                <li><a href="/">Tim</a></li>
+                                <li><a href="/">Blake</a></li>
+                            </ul>
+                        </div>
+                    </div>                
                 </div>
             </div>
-
         </footer>
     );
 };

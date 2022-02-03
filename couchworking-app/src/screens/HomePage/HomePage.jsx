@@ -1,18 +1,17 @@
-import React from 'react';
+
 import './Home.css';
-import { Navbar } from '../../Navbar/Navbar';
-import { Footer } from '../../Footer/Footer';
+import Display from '../../Display/Display'
 
 export default function HomePage() {
 
   return (
     <div>
-        < Navbar/>
-        <div>
+        <Display user={props.user}>
+        <div className="home-container">
             <button></button>
             <button></button>
         </div>
-        <Footer />
+        </Display>
     </div>
   )
 }
