@@ -1,8 +1,9 @@
 import './Display.css'
-import Navbar from '../Nav/Nav';
-import Footer from '../../Footer/Footer';
+import Navbar from '../NavBar/NavBar';
+import Footer from '../Footer/Footer';
 
-const Display = () => {
+const Display = (props) => {
+  return (
     <div className="page-display">
         <Navbar user={props.user} />
         <div className="display-content">
@@ -10,6 +11,6 @@ const Display = () => {
         </div>
         <Footer />
     </div>
-}
+)}
 
 export default Display;
