@@ -1,6 +1,9 @@
 import axios from "axios"
+import "./couchlist.css"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import { Card, Container, Row, Col } from 'react-bootstrap';
+
 const baseURL = "https://couch-working.herokuapp.com/"
 
 export default function CouchList() {
@@ -17,21 +20,28 @@ export default function CouchList() {
 
   return(
     <div>
-      <ul>
+      <Container className="grid">
+        <Row>
         {couches.map((couch) => {
           return (
-            <li key={couch._id}> 
-              <Link to={`/couch/${couch._id}`}>
-                <h1>{couch.title}</h1>
-              </Link>
-              <img src={couch.image_URL} alt={couch.title}/>
-              <h3>{couch.location}</h3>
-              <p>{couch.description}</p>
-              <h5>{couch.contactInfo}</h5>   
-            </li>
+            <Col xs="12" sm="6" lg="4" xl="3" style={{display:'flex', justifyContent:'center'}}>
+                <Link to={`/couch/${couch._id}`} style={{ textDecoration: 'none' }}>
+                <Card
+                    bg={"dark"}
+                    style={{ width: "250px", height: "300px" }}
+                    key={couch._id}>
+                    <Card.Img variant="top" src={couch.image_URL} alt={couch.title}></Card.Img>
+                    <Card.Body>
+                      <Card.Title>{couch.title}</Card.Title>
+                      <Card.Text>{couch.location}</Card.Text>
+                    </Card.Body>
+                  </Card>
+                </Link>
+            </Col>
           )
         })}
-      </ul>
+        </Row>
+      </Container>
     </div>
   )
 }
