@@ -1,5 +1,6 @@
 import axios from "axios"
 import "./CouchDetail.css"
+import Display from '../../components/Display/Display';
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { Card, Container, Row, Col, Button } from 'react-bootstrap';
@@ -30,6 +31,7 @@ export default function CouchDetail() {
   }
 
   return (
+    <Display>
       <Container>
         <Row style={{display: "flex", justifyContent: "center"}}> 
           <Col xs="12" md="6"><img className="detail-photo" src={couch?.image_URL} alt={couch?.title} /></Col>
@@ -42,5 +44,6 @@ export default function CouchDetail() {
           </Col>
         </Row>
       </Container>
+      </Display>
   )
 }
