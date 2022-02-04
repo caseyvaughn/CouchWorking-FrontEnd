@@ -5,15 +5,17 @@ body {
   font-family: "Nunito Sans", sans-serif;
 }
 .card-img-top {
-  height: 200px;
+  height: 210px;
   width: 250px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 .card {
   text-decoration: none;
-  background-color: #403f38;
-  /* padding: 20px; */
   margin: 10px;
+  border-radius: 20px;
 }
+
 .card-title {
   text-decoration: none;
   color: white;
@@ -22,6 +24,6 @@ body {
 .card-text {
   text-decoration: none;
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   font-style: italic;
 }

@@ -26,8 +26,8 @@ export default function CouchDetail() {
   return (
       <Container>
         <Row> 
-          <Col><img src={couch?.image_URL} alt={couch?.title} /></Col>
-          <Col className="couch-info">
+          <Col xs="12" md="6"><img className="detail-photo" src={couch?.image_URL} alt={couch?.title} /></Col>
+          <Col xs="12" md="6" className="couch-info">
               <h1>{couch?.title}</h1>
               <h3>{couch?.location}</h3>
               <p>{couch?.description}</p>

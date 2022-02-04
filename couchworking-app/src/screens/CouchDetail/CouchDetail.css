@@ -1,6 +1,17 @@
+.container {
+  margin-top: 50px;
+}
+
 p {
   font-style: italic;
 }
-.couch-info > {
-  justify-content: right;
+.couch-info {
+  text-align: left;
+}
+.detail-photo {
+  border-radius: 20px;
+  border: solid white 10px;
+  width: 100%;
+  height: auto;
+  min-width: 50px;
 }
