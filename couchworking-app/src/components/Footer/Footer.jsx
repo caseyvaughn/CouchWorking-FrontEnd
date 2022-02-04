@@ -1,27 +1,37 @@
 import './Footer.css';
-import {Card, Button} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
 
 const Footer = () => {
 
-    return (
-
-        <Card>
-        <Card.Header>Contact Us</Card.Header>
-        <Card.Body>
-            <Card.Title>Github</Card.Title>
-            <Button variant="primary"><a href="/">Trung</a></Button>
-            <Button variant="primary"><a href="/">Casey</a></Button>
-            <Button variant="primary"><a href="/">Blake</a></Button>
-            <Button variant="primary"><a href="/">Tim</a></Button>
-        </Card.Body>
-        <Card.Body>
-            <Card.Title>LinkIn</Card.Title>
-            <Button variant="primary"><a href="/">Trung</a></Button>
-            <Button variant="primary"><a href="/">Casey</a></Button>
-            <Button variant="primary"><a href="/">Blake</a></Button>
-            <Button variant="primary"><a href="/">Tim</a></Button>
-        </Card.Body>
-        </Card>
+    return (  
+        <div className="footer-container">
+             <h2 className="footer-start">Contact Us</h2>
+            <Container>
+                <Row>
+                    <Col>
+                    <h3 className="social">Github</h3>
+                    <div className="social-links">
+                        <a href="/">Trung</a>
+                       <a href="/">Casey</a>
+                       <a href="/">Blake</a>
+                       <a href="/">Tim</a>
+                       </div>
+                    </Col>
+                </Row>
+          
+                <Row>
+                    <Col>
+                    <h3 className="social">LinkedIn</h3>
+                    <div className="social-links">
+                       <a href="/">Trung</a>
+                       <a href="/">Casey</a>
+                       <a href="/">Blake</a>
+                       <a href="/">Tim</a>
+                       </div>
+                    </Col>
+                </Row>
+            </Container>
+        </div>
     )
 }
 

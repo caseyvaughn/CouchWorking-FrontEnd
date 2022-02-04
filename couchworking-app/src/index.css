@@ -8,6 +8,12 @@ body {
   background-color: rgb(226, 201, 89);
 }
 
+html, body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
