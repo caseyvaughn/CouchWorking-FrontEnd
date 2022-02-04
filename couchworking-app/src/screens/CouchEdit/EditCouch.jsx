@@ -51,10 +51,9 @@ export default function CouchEdit() {
   return (
     <div>
       <Display>
-        <h2>Thank you for updating your CouchWorking place!</h2>
-        
+        {/* <h2>Thank you for updating your CouchWorking place!</h2> */}
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
+          <Form.Group>
             <Form.Label>Title</Form.Label>
             <Form.Control type="text" value={input.title} id='title' placeholder="Enter title" onChange={handleTextInput} required/>
           </Form.Group>

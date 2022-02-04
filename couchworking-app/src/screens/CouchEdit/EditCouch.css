@@ -1,15 +1,17 @@
+form {
+  margin-top: 15px;
+}
 .form-group {
   display: flex;
   justify-content: center;
 }
-
 .form-label {
   margin-right: 20px;
   font-size: large;
   margin: 5px;
 }
 .form-control {
-  width: 50%;
+  width: 70%;
   display: block;
   margin: 0 auto;
 }
