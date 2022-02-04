@@ -31,13 +31,13 @@ export default function CouchDetail() {
 
   return (
       <Container>
-        <Row> 
+        <Row style={{display: "flex", justifyContent: "center"}}> 
           <Col xs="12" md="6"><img className="detail-photo" src={couch?.image_URL} alt={couch?.title} /></Col>
           <Col xs="12" md="6" className="couch-info">
               <h1>{couch?.title}</h1>
               <h3>{couch?.location}</h3>
               <p>{couch?.description}</p>
-          <h5>Contact Information: {couch?.contactInfo}</h5>
+              <h5>Contact Information: {couch?.contactInfo}</h5>
           <Button variant="dark" onClick={routeAllCouches}>View All Couches</Button>
           </Col>
         </Row>
