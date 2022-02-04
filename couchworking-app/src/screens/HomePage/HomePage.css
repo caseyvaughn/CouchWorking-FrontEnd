@@ -1,0 +1,32 @@
+.home-container {
+    display: flex;
+}
+
+.home-image-right {
+    display: block;
+    height: 100vh;
+    width: 50vw;
+    object-fit:cover;
+      position: relative;
+    text-align: center;
+    color: black;
+}
+
+.home-image-left {
+    display: block;
+    height: 100vh;
+    width: 50vw;
+    object-fit:cover;
+}
+
+
+button.home-button {
+    border: 0px;
+    padding: 0;
+    background: none;
+}
+
+/* button:focus {
+    outline: none !important;
+    box-shadow: none;
+}  */
