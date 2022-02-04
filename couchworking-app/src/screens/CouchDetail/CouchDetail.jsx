@@ -3,7 +3,7 @@ import "./CouchDetail.css"
 import Display from '../../components/Display/Display';
 import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
-import { Card, Container, Row, Col, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
 
 const baseURL = "https://couch-working.herokuapp.com/"
