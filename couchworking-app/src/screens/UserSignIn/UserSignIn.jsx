@@ -58,7 +58,6 @@ const UserSignIn = () => {
           toggleClass(e)
         }}
       >
-        {" "}
         Sign In
       </button>
       <div className="form-container">
