@@ -56,23 +56,23 @@ export default function CouchEdit() {
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3">
             <Form.Label>Title</Form.Label>
-            <Form.Control type="text" value={input.title} id='title' onChange={handleTextInput} required/>
+            <Form.Control type="text" value={input.title} id='title' placeholder="Enter title" onChange={handleTextInput} required/>
           </Form.Group>
           <Form.Group>
             <Form.Label>Description</Form.Label>
-            <Form.Control type="text" value={input.description} id='description' onChange={handleTextInput}/>
+            <Form.Control type="text" value={input.description} id='description' placeholder="Enter description" onChange={handleTextInput}/>
           </Form.Group>
           <Form.Group>
             <Form.Label>Location</Form.Label>
-            <Form.Control type="text" value={input.location} id='location' onChange={handleTextInput} required/>
+            <Form.Control type="text" value={input.location} id='location' placeholder="Enter location" onChange={handleTextInput} required/>
           </Form.Group>
           <Form.Group>
             <Form.Label>Image URL</Form.Label>
-            <Form.Control type="text" value={input.image_URL} id='image_URL' onChange={handleTextInput}/>
+            <Form.Control type="text" value={input.image_URL} id='image_URL' placeholder="Enter image URL" onChange={handleTextInput}/>
           </Form.Group>
           <Form.Group>
             <Form.Label>Contact Information</Form.Label>
-            <Form.Control type="text" value={input.contactInfo} id='contactInfo' onChange={handleTextInput}/>
+            <Form.Control type="text" value={input.contactInfo} id='contactInfo' placeholder="Enter contact information"onChange={handleTextInput}/>
           </Form.Group>
           <Button variant="dark" type="submit" onClick={routeCouchDetail}>Edit Couch</Button>
         </Form>
