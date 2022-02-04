@@ -32,25 +32,6 @@ const Footer = () => {
                 </Row>
             </Container>
         </div>
-        
-
-        // <Card>
-        // <Card.Header>Contact Us</Card.Header>
-        // <Card.Body>
-        //     <Card.Title>Github</Card.Title>
-        //    <a href="/">Trung</a>
-        //    <a href="/">Casey</a>
-        //    <a href="/">Blake</a>
-        //    <a href="/">Tim</a>
-        // </Card.Body>
-        // <Card.Body>
-        //     <Card.Title>LinkIn</Card.Title>
-        //    <a href="/">Trung</a>
-        //    <a href="/">Casey</a>
-        //    <a href="/">Blake</a>
-        //    <a href="/">Tim</a>
-        // </Card.Body>
-        // </Card>
     )
 }
 
