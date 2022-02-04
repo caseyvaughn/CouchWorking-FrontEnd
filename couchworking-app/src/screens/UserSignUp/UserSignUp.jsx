@@ -13,7 +13,7 @@ const default_User = {
 
 const baseURL = "https://couch-working.herokuapp.com/"
 
-const UserSignUp = () => {
+const UserSignUp = (props) => {
   const [newUser, setNewUser] = useState(default_User)
   const navigate = useNavigate()
 
@@ -32,12 +32,13 @@ const UserSignUp = () => {
       url: `${baseURL}user-api/sign-up`,
       data: newUser,
     })
-      .then((response) => {
+      .then(() => {
+        props.setUser(newUser)
         navigate("/")
-        return response.data
       })
       .catch((error) => {
         console.log(error)
+        props.setUser(null)
         navigate("/")
       })
     // await axios.post(`${baseURL}user-api/sign-up`, newUser);
