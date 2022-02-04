@@ -1,11 +1,12 @@
 import './Display.css'
-import Navbar from '../NavBar/NavBar';
+import NavContainer from '../NavContainer/NavContainer';
 import Footer from '../Footer/Footer';
+
 
 const Display = (props) => {
   return (
     <div className="page-display">
-        <Navbar user={props.user} />
+        <NavContainer user={props.user} />
         <div className="display-content">
             {props.children}
         </div>
