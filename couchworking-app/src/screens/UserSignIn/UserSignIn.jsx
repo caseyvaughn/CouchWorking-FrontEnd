@@ -1,6 +1,6 @@
 import axios from "axios"
 import {useState} from "react"
-import {useNavigate} from "react-router-dom"
+import jwtDecode from "jwt-decode"
 import "./UserSignIn.css"
 
 const default_User = {
@@ -10,10 +10,9 @@ const default_User = {
 
 const baseURL = "https://couch-working.herokuapp.com/"
 
-const UserSignIn = () => {
+const UserSignIn = (props) => {
   const [user, setUser] = useState(default_User)
   const [toggle, setToggle] = useState(false)
-  const navigate = useNavigate()
 
   const handleTextInput = (e) => {
     const {id, value} = e.target
@@ -31,12 +30,16 @@ const UserSignIn = () => {
       data: user,
     })
       .then((response) => {
-        return response.data
+        console.log(response)
+        console.log(response.data.data)
+        const token = jwtDecode(response.data.data)
+        props.setUser(token)
+        localStorage.setItem("token", response.data.data)
       })
       .catch((error) => {
         console.log(error)
+        props.setUser(null)
       })
-    navigate("/")
   }
 
   let field = "fieldset1"
