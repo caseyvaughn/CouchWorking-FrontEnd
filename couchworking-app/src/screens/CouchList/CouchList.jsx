@@ -1,5 +1,6 @@
 import axios from "axios"
 import "./couchlist.css"
+import Display from '../../components/Display/Display';
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { Card, Container, Row, Col } from 'react-bootstrap';
@@ -20,6 +21,7 @@ export default function CouchList() {
 
   return(
     <div>
+      <Display>
       <Container className="grid">
         <Row>
         {couches.map((couch) => {
@@ -41,7 +43,8 @@ export default function CouchList() {
           )
         })}
         </Row>
-      </Container>
+        </Container>
+        </Display>
     </div>
   )
 }

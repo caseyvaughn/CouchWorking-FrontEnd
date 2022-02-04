@@ -1,0 +1,16 @@
+.navbar {
+  background-color: #fbea74;
+  color: white;
+}
+.navbar-brand {
+  margin-left: 30px;
+  font-size: 30px;
+}
+.show {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  margin: 20px;
+}
