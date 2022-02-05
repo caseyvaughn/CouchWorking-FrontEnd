@@ -1,10 +1,49 @@
 import './Footer.css';
-import {Container, Row, Col} from 'react-bootstrap';
 
 const Footer = () => {
 
     return (  
-        <div className="footer-container">
+        <div className="main-footer">
+            <h3>Contact Us</h3>
+        <div className="container">
+          <div className="row">
+            <div className="col">
+              <h4>LinkedIn</h4>
+              <ui className="list-unstyled">
+                    <a className="social-link" href="/">Trung</a>
+                    <a className="social-link" href="/">Casey</a>
+                    <a className="social-link" href="/">Blake</a>
+                    <a className="social-link" href="/">Tim</a>
+              </ui>
+            </div>
+            <div className="col">
+              <h4>Github</h4>
+              <ui className="list-unstyled">
+                    <a className="social-link" href="/">Trung</a>
+                    <a className="social-link" href="/">Casey</a>
+                    <a className="social-link" href="/">Blake</a>
+                    <a className="social-link" href="/">Tim</a>
+              </ui>
+            </div>
+            <div className="col">
+              <h4>Portfolio</h4>
+              <ui className="list-unstyled">
+                    <a className="social-link" href="/">Trung</a>
+                    <a className="social-link" href="/">Casey</a>
+                    <a className="social-link" href="/">Blake</a>
+                    <a className="social-link" href="/">Tim</a>
+              </ui>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+}
+
+export default Footer;
+
+
+{/* <div className="footer-container">
              <h2 className="footer-start">Contact Us</h2>
             <Container>
                 <Row>
@@ -31,8 +70,4 @@ const Footer = () => {
                     </Col>
                 </Row>
             </Container>
-        </div>
-    )
-}
-
-export default Footer;
+        </div> */}
