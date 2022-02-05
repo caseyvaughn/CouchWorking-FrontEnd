@@ -8,7 +8,6 @@ export const verifyUser = async () => {
       url: `${baseURL}user-api/verify`,
     })
       .then((response) => {
-        console.log(response)
         return response.data
       })
       .catch((error) => {

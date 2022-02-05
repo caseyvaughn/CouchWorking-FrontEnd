@@ -2,6 +2,7 @@ import axios from "axios"
 import {useState} from "react"
 import jwtDecode from "jwt-decode"
 import "./UserSignIn.css"
+import {useNavigate} from "react-router-dom"
 
 const default_User = {
   username: "",
@@ -13,6 +14,7 @@ const baseURL = "https://couch-working.herokuapp.com/"
 const UserSignIn = (props) => {
   const [user, setUser] = useState(default_User)
   const [toggle, setToggle] = useState(false)
+  const navigate = useNavigate()
 
   const handleTextInput = (e) => {
     const {id, value} = e.target
@@ -30,11 +32,9 @@ const UserSignIn = (props) => {
       data: user,
     })
       .then((response) => {
-        console.log(response)
-        console.log(response.data.data)
-        const token = jwtDecode(response.data.data)
-        props.setUser(token)
+        const token = response.data.data
         localStorage.setItem("token", response.data.data)
+        navigate("/")
       })
       .catch((error) => {
         console.log(error)
