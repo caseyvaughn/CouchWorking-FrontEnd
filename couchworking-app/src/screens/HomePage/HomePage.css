@@ -34,11 +34,12 @@
 }
 
 .home-button-right {
-    background-image: url("../../assets/My project.jpg");
-    /* background-size: 100vw 100vh; */
-    background-size: contain;
+    background-image: url("../../assets/Contemporary-01.jpg");
+    background-size: 150vw 100vh;
+    /* background-size: contain; */
     /* background-position: fill;  */
     background-repeat:no-repeat;
+    background-position: left;
     color: black;
     cursor: pointer;
     font-size: 3.5rem;
@@ -52,10 +53,10 @@
 
 
 .home-button-right:hover {
-    opacity: 0.5;  
+    opacity: 0.5;
     font-size: 3.6rem;
     font-weight: bold;
-    background-size: auto;
+    background-size: 160vw 115vh;
 }
 
 .home-button-left:hover {
