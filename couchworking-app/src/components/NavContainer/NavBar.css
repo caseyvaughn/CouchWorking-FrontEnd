@@ -3,6 +3,7 @@
   margin-left: 30px;
   font-size: 30px;
 }
+
 .show {
   display: flex;
   justify-content: flex-end;
@@ -12,3 +13,6 @@
   margin: 20px;
 }
 
+.fixed-top {
+position: fixed;
+}

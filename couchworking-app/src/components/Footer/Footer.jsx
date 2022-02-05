@@ -11,10 +11,10 @@ const Footer = () => {
                     <Col>
                     <h3 className="social">Github</h3>
                     <div className="social-links">
-                        <a href="/">Trung</a>
-                       <a href="/">Casey</a>
-                       <a href="/">Blake</a>
-                       <a href="/">Tim</a>
+                       <a className="social-link" href="/">Trung</a>
+                       <a className="social-link" href="/">Casey</a>
+                       <a className="social-link" href="/">Blake</a>
+                       <a className="social-link" href="/">Tim</a>
                        </div>
                     </Col>
                 </Row>
@@ -23,10 +23,10 @@ const Footer = () => {
                     <Col>
                     <h3 className="social">LinkedIn</h3>
                     <div className="social-links">
-                       <a href="/">Trung</a>
-                       <a href="/">Casey</a>
-                       <a href="/">Blake</a>
-                       <a href="/">Tim</a>
+                       <a className="social-link" href="/">Trung</a>
+                       <a className="social-link" href="/">Casey</a>
+                       <a className="social-link" href="/">Blake</a>
+                       <a className="social-link" href="/">Tim</a>
                        </div>
                     </Col>
                 </Row>

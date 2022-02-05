@@ -1,25 +1,15 @@
-
-
 .home-container {
     display: flex;
-    background-color: white;
+    margin-top: -25px;
 }
 
-.home-image-right {
-    display: block;
-    height: 100vh;
-    width: 50vw;
-    object-fit:cover;
-    position: relative;
-    text-align: center;
-    color: black;
+.home-container-right {
+    margin: auto;
 }
 
 .home-button-left {
     background-image: url("../../assets/Living room1-01.jpg");
     background-size: 150vw 100vh;
-    /* background-size: contain; */
-    /* background-position: fill;  */
     background-repeat:no-repeat;
     background-position: left;
     color: black;
@@ -31,13 +21,12 @@
     width: 50vw;
     opacity: 1;
     transition: .5s;
+    margin: auto;
 }
 
 .home-button-right {
     background-image: url("../../assets/Contemporary-01.jpg");
     background-size: 150vw 100vh;
-    /* background-size: contain; */
-    /* background-position: fill;  */
     background-repeat:no-repeat;
     background-position: left;
     color: black;
@@ -49,6 +38,7 @@
     width: 50vw;
     opacity: 1;
     transition: .5s;
+    margin: auto;
 }
 
 
