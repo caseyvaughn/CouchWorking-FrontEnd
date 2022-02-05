@@ -7,15 +7,15 @@
     -webkit-transition:all .5s ease-in;
     transition:all .5s ease-in;
     padding: 10px;
-    font-size: 20px;
+    font-size: 1vw;
     margin-bottom: 10px;
   }
-  .social-link:hover { 
+.social-link:hover { 
       color:#c3c3e5; 
       border-bottom: 1.2px solid #c3c3e5;
   } 
 
-  .main-footer {
+.main-footer {
     padding-top: 3em;
     position: relative;
     bottom: 0;
@@ -23,6 +23,16 @@
     color: #8B907C;
   }
 
-  .row {
+.row {
     margin-bottom: 15px;
+  }
+
+  h4 {
+    font-size: 2vw;
+  }
+
+  @media screen and (min-width: 1400px) {
+    h4 {
+      font-size: 1.8vw;
+    }
   }

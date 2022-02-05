@@ -3,18 +3,18 @@
     margin-top: -25px;
 }
 
-.home-container-right {
-    margin: auto;
+.home-container-left{
+    object-fit:cover;
 }
 
 .home-button-left {
     background-image: url("../../assets/Living room1-01.jpg");
-    background-size: 150vw 100vh;
     background-repeat:no-repeat;
     background-position: left;
+    background-size: cover;
     color: black;
     cursor: pointer;
-    font-size: 3.5rem;
+    font-size: 4vw;
     border: 0px;
     display: block;
     height: 100vh;
@@ -26,39 +26,36 @@
 
 .home-button-right {
     background-image: url("../../assets/Contemporary-01.jpg");
-    background-size: 150vw 100vh;
     background-repeat:no-repeat;
     background-position: left;
+    background-size: cover;
     color: black;
     cursor: pointer;
-    font-size: 3.5rem;
+    font-size: 4vw;
     border: 0px;
-    display: block;
     height: 100vh;
     width: 50vw;
     opacity: 1;
     transition: .5s;
     margin: auto;
+    padding: auto;
 }
-
 
 .home-button-right:hover {
     opacity: 0.5;
-    font-size: 3.6rem;
+    font-size: 5vw;
     font-weight: bold;
-    background-size: 160vw 115vh;
 }
 
 .home-button-left:hover {
     opacity: 0.5;
-    font-size: 3.6rem;
+    font-size: 5vw;
     font-weight: bold;
-    background-size: 160vw 115vh;
 }
 
-
-
-/* button:focus {
-    outline: none !important;
-    box-shadow: none;
-}  */
+/* @media screen and (max-width: 1600px){
+    .home-container {
+        display: block;
+        margin: 0;
+    }
+} */
