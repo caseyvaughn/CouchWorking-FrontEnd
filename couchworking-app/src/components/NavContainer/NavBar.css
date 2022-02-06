@@ -16,3 +16,8 @@
 .fixed-top {
 position: fixed;
 }
+
+a.link.nav-link:hover {
+    color:#c3c3e5; 
+    border-bottom: 1.2px solid #c3c3e5;
+}
