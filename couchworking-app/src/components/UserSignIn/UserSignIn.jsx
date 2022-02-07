@@ -30,6 +30,9 @@ const UserSignIn = () => {
     })
       .then((response) => {
         const token = response.data.data
+<<<<<<< HEAD
+        localStorage.setItem("token", token)
+=======
         if (token === undefined) {
           alert("Error signing in. Please try again")
         } else {
@@ -37,6 +40,7 @@ const UserSignIn = () => {
           localStorage.setItem("token", token)
           setToggle(false)
         }
+>>>>>>> ac28a4212ab839bf40dd1ff5df7a0fdccdeedfbb
       })
       .catch((error) => {
         console.log(error)
