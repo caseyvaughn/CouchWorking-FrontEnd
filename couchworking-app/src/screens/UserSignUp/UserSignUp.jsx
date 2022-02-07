@@ -43,7 +43,7 @@ const UserSignUp = () => {
   }
 
   return (
-    <div className="form-container">
+    <div className="form-div">
       <form
         className="form-container2"
         onSubmit={(e) => {
