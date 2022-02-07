@@ -1,6 +1,9 @@
 import axios from "axios"
 import {useState} from "react"
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
+import Form from 'react-bootstrap/Form'
+import Button from "react-bootstrap/Button"
+import Display from '../../components/Display/Display';
 import "./UserSignUp.css"
 
 const default_User = {
@@ -43,64 +46,63 @@ const UserSignUp = () => {
   }
 
   return (
-    <div className="form-div">
-      <form
-        className="form-container2"
-        onSubmit={(e) => {
-          handleSubmit(e)
-        }}
-      >
-        <fieldset className="field-set3">
-          <legend>Sign Up</legend>
-          <input
-            id="username"
-            value={newUser.username}
-            placeholder="Username"
-            onChange={(e) => {
+    <div>
+      <Display>
+        <Form className="signup-form" onSubmit={(e) => { handleSubmit(e) }}>
+          <Form.Group>
+            <Form.Label>Username</Form.Label>
+            <Form.Control
+              id="username"
+              value={newUser.username}
+              placeholder="Username"
+              onChange={(e) => {
               handleTextInput(e)
-            }}
-          ></input>
-          <br />
-          <input
-            id="firstName"
-            value={newUser.firstName}
-            placeholder="First Name"
-            onChange={(e) => {
+            }}/>
+          </Form.Group>
+
+          <Form.Group>
+            <Form.Label>First Name</Form.Label>
+              <Form.Control id="firstName"
+              value={newUser.firstName}
+              placeholder="First Name"
+              onChange={(e) => {
               handleTextInput(e)
-            }}
-          ></input>
-          <br />
-          <input
-            id="lastName"
+            }}/>
+          </Form.Group>
+
+          <Form.Group>
+            <Form.Label>Last Name</Form.Label>
+            <Form.Control id="lastName"
             value={newUser.lastName}
             placeholder="Last Name"
             onChange={(e) => {
               handleTextInput(e)
-            }}
-          ></input>
-          <br />
-          <input
-            id="email"
+            }}/>
+          </Form.Group>
+
+          <Form.Group>
+            <Form.Label>Email</Form.Label>
+            <Form.Control id="email"
             value={newUser.email}
             placeholder="Email"
             onChange={(e) => {
               handleTextInput(e)
-            }}
-          ></input>
-          <br />
-          <input
-            id="password"
+            }}/>
+          </Form.Group>
+
+          <Form.Group>
+            <Form.Label>Password</Form.Label>
+            <Form.Control  id="password"
             value={newUser.password}
             placeholder="Password"
             onChange={(e) => {
               handleTextInput(e)
-            }}
-          ></input>
-          <br />
-          <button>Submit</button>
-        </fieldset>
-      </form>
-    </div>
+            }}/>
+          </Form.Group>
+          <Button variant="dark">Create Account</Button>
+        </Form>
+      </Display>
+      </div>
   )
 }
 

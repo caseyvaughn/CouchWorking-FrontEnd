@@ -91,7 +91,7 @@ const UserSignIn = () => {
               }}
             ></input>
             <br />
-            <button>Submit</button>
+            <Button variant="dark">Sign In</Button>
           </fieldset>
         </form>
       </div>
