@@ -61,7 +61,7 @@ export default function CouchList() {
   return (
     <div>
       <Display>
-        <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
+        {/* <Search onSubmit={handleSubmit} handleSearch={handleSearch} /> */}
         <Sort onSubmit={handleSubmit} handleSort={handleSort} />
         <Container className="grid">
           <Row>
