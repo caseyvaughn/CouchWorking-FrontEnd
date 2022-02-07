@@ -1,5 +1,39 @@
-
 .social-link {
+  font-size: 1.5em;
+  color: #8b907c;
+  text-decoration: none;
+  -ms-transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+  padding: 10px;
+  font-size: 1vw;
+  margin-bottom: 10px;
+}
+.social-link:hover {
+  color: #c3c3e5;
+  border-bottom: 1.2px solid #c3c3e5;
+}
+
+.main-footer {
+  padding-top: 1em;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  color: #8b907c;
+  height: 5vh;
+}
+
+.row {
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-size: 2vw;
+  padding: 0.5em;
+}
+
+/* @media screen and (min-width: 1400px) {
+
     font-size: 1.5em;
     color: #8B907C;
     text-decoration: none;
@@ -43,6 +77,13 @@
       padding-top: .5vw;
       padding-bottom: 0;
     }
+
+
+@media screen and (min-width: 425px) {
+  .col {
+    height: 0vh;
+  }
+}
 
     h4.footer-header {
       font-size: 2vw;

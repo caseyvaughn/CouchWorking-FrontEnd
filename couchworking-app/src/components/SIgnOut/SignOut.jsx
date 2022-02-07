@@ -6,6 +6,7 @@ const SignOut = () => {
     if (localStorage.getItem("token")) {
       localStorage.removeItem("token")
       alert("You have signed out.")
+      window.location.reload(false)
     } else {
       alert("You are not signed in.")
     }
