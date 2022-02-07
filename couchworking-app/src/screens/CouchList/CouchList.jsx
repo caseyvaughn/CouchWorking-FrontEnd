@@ -34,9 +34,9 @@ export default function CouchList() {
           <Row>
             {couches.map((couch) => {
               return (
-                <Col xs="12" sm="6" lg="4" xl="3" style={{display: "flex", justifyContent: "center"}}>
+                <Col key={couch._id} xs="12" sm="6" lg="4" xl="3" style={{display: "flex", justifyContent: "center"}}>
                   <Link to={`/couch/${couch._id}`} style={{textDecoration: "none"}}>
-                    <Card bg={"dark"} style={{width: "250px", height: "300px"}} key={couch._id}>
+                    <Card bg={"dark"} style={{width: "250px", height: "300px"}} >
                       <Card.Img variant="top" src={couch.image_URL} alt={couch.title}></Card.Img>
                       <Card.Body>
                         <Card.Title>{couch.title}</Card.Title>
