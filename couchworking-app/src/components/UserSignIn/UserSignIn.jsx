@@ -30,7 +30,13 @@ const UserSignIn = () => {
     })
       .then((response) => {
         const token = response.data.data
-        localStorage.setItem("token", token)
+        if (token === undefined) {
+          alert("Error signing in. Please try again")
+        } else {
+          alert("Login successful")
+          localStorage.setItem("token", token)
+          setToggle(false)
+        }
       })
       .catch((error) => {
         console.log(error)
