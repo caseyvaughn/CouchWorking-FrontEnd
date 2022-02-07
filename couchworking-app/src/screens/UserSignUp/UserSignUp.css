@@ -1,3 +1,10 @@
+.signup-form {
+  margin-top: 100px;
+}
+.form-div {
+  display: inline-block;
+}
+
 .field-set3 {
   border-radius: 15px;
   background-color: white;

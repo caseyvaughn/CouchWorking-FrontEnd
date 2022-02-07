@@ -1,13 +1,11 @@
 .form-container {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
   position: absolute;
 }
 
 .fieldset2 {
   width: 400px;
-  height: 300px;
   border-radius: 15px;
   background-color: rgb(253, 253, 253);
   font-size: 20px;
@@ -22,10 +20,12 @@
 .legend1 {
   text-align: left;
   padding: 0 5px;
+  margin-top: 20px;
+  margin-left: 20px;
   font-weight: bold;
 }
 
-.form-container button {
+/* .form-container button {
   margin-top: 75px;
   width: 390px;
   height: 40px;
@@ -35,11 +35,11 @@
   color: rgb(122, 102, 102);
   font-weight: bold;
   font-size: 17px;
-}
+} */
 
 .form-container input {
   width: 375px;
-  margin-top: 30px;
+  margin-top: 10px;
   border-radius: 5px;
   border: 1px solid rgb(218, 216, 216);
   height: 30px;
@@ -47,5 +47,11 @@
 }
 
 .signin-button {
-  border: none;
+  margin: 20px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.signin-button:hover {
+  color: #c3c3e5;
+  border-bottom: 1.2px solid #c3c3e5;
 }

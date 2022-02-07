@@ -1,5 +1,6 @@
 import axios from "axios"
-import {useState} from "react"
+import { useState } from "react"
+import Button from "react-bootstrap/Button"
 import "./UserSignIn.css"
 
 const default_User = {
@@ -50,7 +51,7 @@ const UserSignIn = () => {
     setToggle(!toggle)
   }
 
-  if (toggle == false) {
+  if (toggle === false) {
     field = "fieldset1"
   } else {
     field = "fieldset2"
@@ -58,14 +59,12 @@ const UserSignIn = () => {
 
   return (
     <div>
-      <button
+      <Button
         className="signin-button"
-        onClick={(e) => {
-          toggleClass(e)
-        }}
-      >
-        Sign In
-      </button>
+        onClick={(e) => {toggleClass(e)}}
+        variant="light"
+      >Sign In
+      </Button>
       <div className="form-container">
         <form
           onSubmit={(e) => {
@@ -92,7 +91,7 @@ const UserSignIn = () => {
               }}
             ></input>
             <br />
-            <button>Submit</button>
+            <Button variant="dark">Sign In</Button>
           </fieldset>
         </form>
       </div>
