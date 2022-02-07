@@ -9,6 +9,7 @@ const default_User = {
   lastName: "",
   email: "",
   password: "",
+  confirmPassword: "",
 }
 
 const baseURL = "https://couch-working.herokuapp.com/"
@@ -26,6 +27,10 @@ const UserSignUp = () => {
   }
 
   const handleSubmit = async (e) => {
+    if (newUser.password !== newUser.confirmPassword) {
+      e.preventDefault();
+      alert("Passwords must match - please change and try again!")
+    } else {
     e.preventDefault()
     await axios({
       method: "post",
@@ -38,7 +43,7 @@ const UserSignUp = () => {
       .catch((error) => {
         console.log(error)
         navigate("/")
-      })
+      })}
     // await axios.post(`${baseURL}user-api/sign-up`, newUser);
   }
 
@@ -92,6 +97,17 @@ const UserSignUp = () => {
             id="password"
             value={newUser.password}
             placeholder="Password"
+            type = "password"
+            onChange={(e) => {
+              handleTextInput(e)
+            }}
+          ></input>
+          <br />
+          <input
+            id="confirmPassword"
+            value={newUser.confirmPassword}
+            placeholder="Confirm password"
+            type = "password"
             onChange={(e) => {
               handleTextInput(e)
             }}
