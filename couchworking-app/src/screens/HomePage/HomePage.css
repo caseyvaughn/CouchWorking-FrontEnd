@@ -1,6 +1,7 @@
 .home-container {
     display: flex;
-    margin-top: -25px;
+    width: 100vw;
+    height: 100vh;
 }
 
  .home-button-left {
@@ -11,13 +12,6 @@
     background-image: url("../../assets/Contemporary-01.jpg");
  }
 
-/* .home-container-left {
-    position: absolute; 
-    height: 100%; 
-    transform: translate(-15%, 17%); 
-    bottom: 0px; 
-} */
-
 .home-button-right, .home-button-left {
     background-repeat:no-repeat;
     background-position: left;
@@ -27,15 +21,13 @@
     font-size: 4vw;
     border: 0px;
     display: block;
-    height: 100vh;
     width: 50vw;
     opacity: 1;
-    margin: auto;
+    margin: 0;
     -moz-transition: all .5s;
     -webkit-transition: all .5s;
     transition: all .5s;
-    overflow:visible;
-    height: 80vh;
+    height: 100vh;
 }
 
 .home-button-right:hover, .home-button-left:hover {
@@ -46,6 +38,7 @@
  @media only screen and (max-width: 768px) {
     .home-container {
         flex-direction: column;
+        margin-top: -25px;
     }
     .home-button-right, .home-button-left {
         width: 100vw;
@@ -54,19 +47,11 @@
 }
 
 @media only screen and (max-width: 425px) {
-    .home-container {
-        flex-direction: column;
-    }
     .home-button-right, .home-button-left {
         width: 100vw;
-        height: 25vh;
+        height: 50vh;
+        font-size: 6vw;  
     }
 }
 
 
-/*
-@media only screen and (max-width: 768px) {
-    .home-button-right, .home-button-left {
-        max-height: 600px;
-    }
-} */
