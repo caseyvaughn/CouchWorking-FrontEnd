@@ -119,17 +119,20 @@ const UserSignUp = () => {
                 handleTextInput(e)
               }}
             />
-            <br />
-            <input
-              id="confirmPassword"
-              value={newUser.confirmPassword}
-              placeholder="Confirm password"
-              type="password"
-              onChange={(e) => {
-                handleTextInput(e)
-              }}
-            />
           </Form.Group>
+
+          {/* Form input for confirm password POST MVP
+          <Form.Group>
+          <Form.Label>Confirm Password</Form.Label>
+            <Form.Control id="confirmPassword"
+            value={newUser.confirmPassword}
+            placeholder="Confirm password"
+            type = "password"
+            onChange={(e) => {
+              handleTextInput(e)
+            }} />
+          </Form.Group> */}
+
           <Button variant="dark">Create Account</Button>
         </Form>
       </Display>
