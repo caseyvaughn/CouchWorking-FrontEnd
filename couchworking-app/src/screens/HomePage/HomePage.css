@@ -35,6 +35,7 @@
     -webkit-transition: all .5s;
     transition: all .5s;
     overflow:visible;
+    height: 80vh;
 }
 
 .home-button-right:hover, .home-button-left:hover {
@@ -42,3 +43,30 @@
     transform: scale(1.05);
 }
 
+ @media only screen and (max-width: 768px) {
+    .home-container {
+        flex-direction: column;
+    }
+    .home-button-right, .home-button-left {
+        width: 100vw;
+        height: 50vh;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .home-container {
+        flex-direction: column;
+    }
+    .home-button-right, .home-button-left {
+        width: 100vw;
+        height: 25vh;
+    }
+}
+
+
+/*
+@media only screen and (max-width: 768px) {
+    .home-button-right, .home-button-left {
+        max-height: 600px;
+    }
+} */
