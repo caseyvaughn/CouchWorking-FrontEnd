@@ -1,4 +1,4 @@
-/* .search {
+.search {
     padding-top: 20px;
     display: flex;
     flex-direction: column;
@@ -17,4 +17,4 @@
 
 .search-input::placeholder {
     letter-spacing: .3px;
-} */
+}
