@@ -20,12 +20,12 @@ export default function CouchDetail(props) {
           Authorization: `${localStorage.getItem("token")}`,
         },
       })
-      console.log(res.data)
+      // console.log(res.data)
       setCouch(res.data)
     }
     fetchCouch()
   }, [id])
-  console.log(auth)
+  // console.log(auth)
   ///add if block for if couch does not exist
 
   const routeAllCouches = () => {
