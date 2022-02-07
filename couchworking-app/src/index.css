@@ -5,16 +5,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(226, 201, 89);
+  margin-bottom: -40px;
 }
-
-html, body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0 !important;
-}
-
-/* @media only and screen (max-width) */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

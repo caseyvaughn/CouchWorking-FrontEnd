@@ -1,3 +1,16 @@
 .display-content {
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 80px; 
 }
+
+@media only screen and (max-width: 768px) {
+    .display-content {
+        margin-bottom: 100px;
+    }
+} 
+
+@media only screen and (max-width: 425px) {
+    .display-content {
+        margin-bottom: 80px;
+    }
+} 
