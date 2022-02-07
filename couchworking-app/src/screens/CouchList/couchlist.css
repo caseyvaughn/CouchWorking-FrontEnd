@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,200&display=swap");
+
+body {
+  background-color: #fbea74;
+  font-family: "Nunito Sans", sans-serif;
+}
+.card-img-top {
+  height: 200px;
+  width: 240px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.card {
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 20px;
+  border: 5px solid white;
+}
+
+.card-title {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+.card-text {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+}

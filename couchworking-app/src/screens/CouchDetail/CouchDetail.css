@@ -1,0 +1,27 @@
+.container {
+  margin-top: 50px;
+}
+
+p {
+  font-style: italic;
+}
+.couch-info {
+  text-align: left;
+  margin-top: 10px;
+}
+.detail-photo {
+  border-radius: 20px;
+  border: solid white 10px;
+  width: 100%;
+  height: auto;
+  min-width: 50px;
+}
+
+@media screen and (max-width: 750px) {
+  .detail-photo {
+    width: 70vw;
+  }
+  .couch-info {
+    width: 70vw;
+  }
+}

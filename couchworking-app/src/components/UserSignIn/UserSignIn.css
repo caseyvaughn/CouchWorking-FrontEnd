@@ -1,0 +1,51 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  position: absolute;
+}
+
+.fieldset2 {
+  width: 400px;
+  height: 300px;
+  border-radius: 15px;
+  background-color: rgb(253, 253, 253);
+  font-size: 20px;
+  border: none;
+  color: rgb(122, 102, 102);
+}
+
+.fieldset1 {
+  display: none;
+}
+
+.legend1 {
+  text-align: left;
+  padding: 0 5px;
+  font-weight: bold;
+}
+
+.form-container button {
+  margin-top: 75px;
+  width: 390px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(205, 209, 190);
+  color: rgb(122, 102, 102);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.form-container input {
+  width: 375px;
+  margin-top: 30px;
+  border-radius: 5px;
+  border: 1px solid rgb(218, 216, 216);
+  height: 30px;
+  padding-left: 15px;
+}
+
+.signin-button {
+  border: none;
+}

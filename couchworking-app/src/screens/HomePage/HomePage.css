@@ -1,0 +1,44 @@
+.home-container {
+    display: flex;
+    margin-top: -25px;
+}
+
+ .home-button-left {
+    background-image: url("../../assets/Living room1-01.jpg");
+ }
+
+ .home-button-right {
+    background-image: url("../../assets/Contemporary-01.jpg");
+ }
+
+/* .home-container-left {
+    position: absolute; 
+    height: 100%; 
+    transform: translate(-15%, 17%); 
+    bottom: 0px; 
+} */
+
+.home-button-right, .home-button-left {
+    background-repeat:no-repeat;
+    background-position: left;
+    background-size: cover;
+    color: black;
+    cursor: pointer;
+    font-size: 4vw;
+    border: 0px;
+    display: block;
+    height: 100vh;
+    width: 50vw;
+    opacity: 1;
+    margin: auto;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    overflow:visible;
+}
+
+.home-button-right:hover, .home-button-left:hover {
+    font-size: 4.5vw;
+    transform: scale(1.05);
+}
+
