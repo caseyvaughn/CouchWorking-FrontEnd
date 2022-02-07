@@ -1,6 +1,7 @@
 import axios from "axios"
 import {useState} from "react"
 import "./UserSignIn.css"
+import {useEffect} from "react"
 
 const default_User = {
   username: "",
@@ -41,6 +42,7 @@ const UserSignIn = () => {
       .catch((error) => {
         console.log(error)
       })
+    window.location.reload(false)
   }
 
   let field = "fieldset1"
