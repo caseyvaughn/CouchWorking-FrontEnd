@@ -3,7 +3,6 @@ import {Routes, Route} from "react-router-dom"
 import CouchDetail from "./screens/CouchDetail/CouchDetail"
 import HomePage from "./screens/HomePage/HomePage"
 import UserSignUp from "./screens/UserSignUp/UserSignUp"
-import UserSignIn from "./screens/UserSignIn/UserSignIn"
 import CouchList from "./screens/CouchList/CouchList"
 import CreateCouch from "./screens/CouchCreate/CreateCouch"
 import EditCouch from "./screens/CouchEdit/EditCouch"
@@ -43,7 +42,6 @@ function App() {
         />
         <Route path="/sign-up" element={<UserSignUp />} />
         <Route path="/couches" element={<CouchList user={user} />} />
-        <Route path="/sign-in" element={<UserSignIn />} />
         <Route path="/create" element={<CreateCouch user={user} />} />
       </Routes>
     </div>
