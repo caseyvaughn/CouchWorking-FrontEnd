@@ -20,12 +20,12 @@ export default function CouchDetail(props) {
           Authorization: `${localStorage.getItem("token")}`,
         },
       })
-      console.log(res.data)
+      // console.log(res.data)
       setCouch(res.data)
     }
     fetchCouch()
   }, [id])
-  console.log(auth)
+  // console.log(auth)
   ///add if block for if couch does not exist
 
   const routeAllCouches = () => {
@@ -35,6 +35,16 @@ export default function CouchDetail(props) {
   const routeCouchEdit = () => {
     navigate(`/update/${id}`)
   }
+
+  const handleDelete = async () => {
+    const res = await axios.delete(`${baseURL}couch-api/delete/${id}`, {
+      headers: {
+        Authorization: `${localStorage.getItem("token")}`,
+      }
+    });
+    navigate("/couches")
+  }
+
   return (
     <Display>
       <Container>
@@ -52,6 +62,9 @@ export default function CouchDetail(props) {
             </Button>
             <Button variant="dark" onClick={routeCouchEdit}>
               Edit Couch
+            </Button>
+            <Button variant="dark" onClick={handleDelete}>
+              Delete Couch
             </Button>
           </Col>
         </Row>
