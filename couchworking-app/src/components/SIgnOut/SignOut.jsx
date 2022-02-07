@@ -1,4 +1,4 @@
-import { Button } from "bootstrap"
+import Button from "react-bootstrap/Button"
 
 const SignOut = () => {
   const handleSubmit = () => {
@@ -10,12 +10,13 @@ const SignOut = () => {
     }
   }
   return (
-    <button onClick={() => {
+    <Button onClick={() => {
       handleSubmit()
     }}
+      variant="light"
     >
       Sign Out
-    ></button>
+    </Button>
 
     // <Button>Sign Out</Button>
 
