@@ -1,11 +1,9 @@
-.navbar {
-  background-color: #fbea74;
-  color: white;
-}
+
 .navbar-brand {
   margin-left: 30px;
   font-size: 30px;
 }
+
 .show {
   display: flex;
   justify-content: flex-end;
@@ -13,4 +11,13 @@
 
 .nav-link {
   margin: 20px;
+}
+
+.fixed-top {
+position: fixed;
+}
+
+a.link.nav-link:hover {
+    color:#c3c3e5; 
+    border-bottom: 1.2px solid #c3c3e5;
 }

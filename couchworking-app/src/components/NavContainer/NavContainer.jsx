@@ -18,7 +18,7 @@ const newUserLinks = (
 
 const NavContainer = ({user}) => {
     return (
-       <Navbar collapseOnSelect bg="light" expand="md" sticky="top">
+       <Navbar collapseOnSelect bg="light" expand="md" sticky="top" fixed="top">
           <Navbar.Brand href="/">
               <img src="https://image.emojisky.com/503/377503-middle.png"
                 width="40"
