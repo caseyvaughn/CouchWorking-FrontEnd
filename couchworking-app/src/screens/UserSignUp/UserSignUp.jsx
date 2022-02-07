@@ -32,9 +32,8 @@ const UserSignUp = () => {
       url: `${baseURL}user-api/sign-up`,
       data: newUser,
     })
-      .then((response) => {
+      .then(() => {
         navigate("/")
-        return response.data
       })
       .catch((error) => {
         console.log(error)

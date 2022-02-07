@@ -1,4 +1,7 @@
-import {Navbar, Nav, Container} from 'react-bootstrap';
+import {Navbar, Nav, Container} from "react-bootstrap"
+import "./NavBar.css"
+import UserSignIn from "../UserSignIn/UserSignIn"
+import SignOut from "../SIgnOut/SignOut"
 
 // const userLinks = (
 //     <div>
@@ -8,43 +11,37 @@ import {Navbar, Nav, Container} from 'react-bootstrap';
 // )
 
 const newUserLinks = (
-    <div>
-        <Nav.Link className="link" href="/sign-up">Sign Up</Nav.Link>
-        <Nav.Link className="link" href="/sign-in">Sign In</Nav.Link> 
-        <Nav.Link className="link" href="/couches">View Listings</Nav.Link>  
-    </div>
+  <div className="nav-links mr-auto" style={{display: "flex"}}>
+    <Nav.Link className="link" href="/sign-up">
+      Sign Up
+    </Nav.Link>
+    {/* <Nav.Link className="link" href="/sign-in">
+      Sign In
+    </Nav.Link> */}
+    <UserSignIn />
+    <Nav.Link className="link" href="/couches">
+      View Listings
+    </Nav.Link>
+    <SignOut />
+  </div>
 )
 
 const NavContainer = ({user}) => {
-    return (
-       <Navbar bg="light" expand="lg">
-            <Container>
-                <Navbar.Brand href="/">CouchWorking</Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    {/* {user && <div className="user-link">Hello {user.username}</div>} */}
-                    {newUserLinks}
-                    {/* {user ? userLinks : newUserLinks}      */}
-                </Nav>
-                </Navbar.Collapse>
-        </Container>
+  return (
+    <Navbar collapseOnSelect bg="light" expand="md" sticky="top" fixed="top">
+      <Navbar.Brand href="/">
+        <img src="https://image.emojisky.com/503/377503-middle.png" width="40" height="40" alt="couchworking logo" /> CouchWorking
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="mr-auto">
+          {/* {user && <div className="user-link">Hello {user.username}</div>} */}
+          {newUserLinks}
+          {/* {user ? userLinks : newUserLinks}      */}
+        </Nav>
+      </Navbar.Collapse>
     </Navbar>
-    )
+  )
 }
 
 export default NavContainer
-
-
-// const Navbar = ({user}) => {
-//     return (
-// <nav>
-// <div className="nav-container">
-//     <Nav.Link className="logo" to="/">CouchWorking</Nav.Link>
-//     <div className="nav-links">
-//         {user && <div className="user-link">Hello {user.username}</div>}
-//         {allLinks}
-//         {user ? userLinks : newUserLinks}
-//     </div>
-// </div>
-// </nav>
