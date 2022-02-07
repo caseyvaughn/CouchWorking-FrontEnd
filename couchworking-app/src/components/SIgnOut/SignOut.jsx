@@ -10,14 +10,24 @@ const SignOut = () => {
     }
   }
   return (
-    <button
-      onClick={() => {
-        handleSubmit()
-      }}
+    <button onClick={() => {
+      handleSubmit()
+    }}
     >
       Sign Out
-    </button>
+    ></button>
+
+    // <Button>Sign Out</Button>
+
   )
 }
 
 export default SignOut
+
+// onClick={() => {
+//   handleSubmit()
+// }}
+// >
+// Sign Out
+// </button>
+// )
