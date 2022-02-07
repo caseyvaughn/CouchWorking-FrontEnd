@@ -61,12 +61,9 @@ const UserSignIn = () => {
     <div>
       <Button
         className="signin-button"
-        onClick={(e) => {
-          toggleClass(e)
-        }}
+        onClick={(e) => {toggleClass(e)}}
         variant="light"
-      >
-        Sign In
+      >Sign In
       </Button>
       <div className="form-container">
         <form

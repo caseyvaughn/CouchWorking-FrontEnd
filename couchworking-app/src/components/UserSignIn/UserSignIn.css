@@ -47,6 +47,11 @@
 }
 
 .signin-button {
-  border: none;
   margin: 20px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.signin-button:hover {
+  color: #c3c3e5;
+  border-bottom: 1.2px solid #c3c3e5;
 }

@@ -1,3 +1,4 @@
+import "./SignOut.css";
 import Button from "react-bootstrap/Button"
 
 const SignOut = () => {
@@ -10,25 +11,12 @@ const SignOut = () => {
     }
   }
   return (
-    <Button onClick={() => {
-      handleSubmit()
-    }}
+    <Button className="signout-btn" onClick={() => {handleSubmit()}}
       variant="light"
     >
-      Sign Out
+    Sign Out
     </Button>
-
-    // <Button>Sign Out</Button>
-
   )
 }
 
 export default SignOut
-
-// onClick={() => {
-//   handleSubmit()
-// }}
-// >
-// Sign Out
-// </button>
-// )

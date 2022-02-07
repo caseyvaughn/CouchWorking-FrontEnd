@@ -12,16 +12,12 @@ import SignOut from "../SIgnOut/SignOut"
 
 const newUserLinks = (
   <div className="nav-links mr-auto" style={{display: "flex"}}>
-    <Nav.Link className="link" href="/sign-up">
-      Sign Up
-    </Nav.Link>
+    <Nav.Link className="link" href="/sign-up">Sign Up</Nav.Link>
+    <Nav.Link className="link" href="/couches">View Listings</Nav.Link>
     {/* <Nav.Link className="link" href="/sign-in">
       Sign In
     </Nav.Link> */}
     <UserSignIn />
-    <Nav.Link className="link" href="/couches">
-      View Listings
-    </Nav.Link>
     <SignOut />
   </div>
 )
