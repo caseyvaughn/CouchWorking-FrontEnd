@@ -1,4 +1,4 @@
-import {Navbar, Nav, Container} from "react-bootstrap"
+import {Navbar, Nav} from "react-bootstrap"
 import "./NavBar.css"
 import UserSignIn from "../UserSignIn/UserSignIn"
 import SignOut from "../SIgnOut/SignOut"
