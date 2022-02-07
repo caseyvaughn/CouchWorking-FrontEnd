@@ -11,6 +11,13 @@
     background-image: url("../../assets/Contemporary-01.jpg");
  }
 
+/* .home-container-left {
+    position: absolute; 
+    height: 100%; 
+    transform: translate(-15%, 17%); 
+    bottom: 0px; 
+} */
+
 .home-button-right, .home-button-left {
     background-repeat:no-repeat;
     background-position: left;
@@ -34,3 +41,4 @@
     font-size: 4.5vw;
     transform: scale(1.05);
 }
+

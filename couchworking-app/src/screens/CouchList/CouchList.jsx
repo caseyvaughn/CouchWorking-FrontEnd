@@ -1,6 +1,9 @@
 import axios from "axios"
 import "./couchlist.css"
 import Display from '../../components/Display/Display';
+// import Search from '../../components/Search/Search'
+// import Sort from '../../components/Sort/Sort'
+// import { asc, desc } from '../../utilities/Sort.js'
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { Card, Container, Row, Col } from 'react-bootstrap';
@@ -9,6 +12,10 @@ const baseURL = "https://couch-working.herokuapp.com/"
 
 export default function CouchList() {
   const [couches, setCouches] = useState([])
+  // const [searchParams, setSearchParams] = useState ([])
+  // const [sort, setSort] = useState (false)
+  // const [sortParams, setSortParams] = useState ('location-ascending')
+
   useEffect(() => {
     const fetchCouches = async () => {
       const res = await axios.get(`${baseURL}couch-api/couches`)
