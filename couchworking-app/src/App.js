@@ -8,22 +8,25 @@ import CouchList from "./screens/CouchList/CouchList"
 import CreateCouch from "./screens/CouchCreate/CreateCouch"
 import EditCouch from "./screens/CouchEdit/EditCouch"
 import {useState, useEffect} from "react"
-import {verifyUser} from "./services/users"
 
 function App() {
-  const [user, setUser] = useState(null)
+  // const [user, setUser] = useState(null)
+  // const [toggle, setToggle] = useState(false)
 
-  useEffect(() => {
-    const fetchUser = async () => {
-      const user = await verifyUser()
-      if (user) {
-        setUser(user)
-      } else {
-        setUser(null)
-      }
-    }
-    fetchUser()
-  }, [])
+  // useEffect(() => {
+  //   const fetchUser = async () => {
+  //     const user = await verifyUser()
+  //     if (user) {
+  //       setUser(user)
+  //     } else {
+  //       setUser(null)
+  //     }
+  //   }
+  //   fetchUser()
+  // }, [])
+  // console.log(user)
+
+  const user = localStorage.getItem("token")
 
   return (
     <div className="App">
@@ -38,9 +41,9 @@ function App() {
             />
           }
         />
-        <Route path="/sign-up" element={<UserSignUp setUser={setUser} />} />
+        <Route path="/sign-up" element={<UserSignUp />} />
         <Route path="/couches" element={<CouchList user={user} />} />
-        <Route path="/sign-in" element={<UserSignIn setUser={setUser} />} />
+        <Route path="/sign-in" element={<UserSignIn />} />
         <Route path="/create" element={<CreateCouch user={user} />} />
       </Routes>
     </div>
