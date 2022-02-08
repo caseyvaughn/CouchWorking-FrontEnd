@@ -1,10 +1,11 @@
-import "./SignOut.css";
+import "./SignOut.css"
 import Button from "react-bootstrap/Button"
 
 const SignOut = () => {
   const handleSubmit = () => {
     if (localStorage.getItem("token")) {
       localStorage.removeItem("token")
+      localStorage.removeItem("username")
       alert("You have signed out.")
       window.location.reload(false)
     } else {
@@ -12,10 +13,14 @@ const SignOut = () => {
     }
   }
   return (
-    <Button className="signout-btn" onClick={() => {handleSubmit()}}
+    <Button
+      className="signout-btn"
+      onClick={() => {
+        handleSubmit()
+      }}
       variant="light"
     >
-    Sign Out
+      Sign Out
     </Button>
   )
 }

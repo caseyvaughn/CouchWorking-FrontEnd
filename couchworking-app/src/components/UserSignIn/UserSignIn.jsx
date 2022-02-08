@@ -1,8 +1,8 @@
 import axios from "axios"
-import { useState } from "react"
+import jwtDecode from "jwt-decode"
+import {useState} from "react"
 import Button from "react-bootstrap/Button"
 import "./UserSignIn.css"
-import {useEffect} from "react"
 
 const default_User = {
   username: "",
@@ -32,12 +32,12 @@ const UserSignIn = () => {
     })
       .then((response) => {
         const token = response.data.data
-        localStorage.setItem("token", token)
         if (token === undefined) {
           alert("Error signing in. Please try again")
         } else {
           alert("Login successful")
           localStorage.setItem("token", token)
+          localStorage.setItem("username", user.username)
           setToggle(false)
         }
       })
@@ -63,16 +63,15 @@ const UserSignIn = () => {
     <div>
       <Button
         className="signin-button"
-        onClick={(e) => {toggleClass(e)}}
+        onClick={(e) => {
+          toggleClass(e)
+        }}
         variant="light"
-      >Sign In
+      >
+        Sign In
       </Button>
       <div className="form-container">
-        <form
-          onSubmit={(e) => {
-            handleSubmit(e)
-          }}
-        >
+        <form onSubmit={handleSubmit}>
           <fieldset className={field}>
             <legend className="legend1">Sign In</legend>
             <input
@@ -93,7 +92,9 @@ const UserSignIn = () => {
               }}
             ></input>
             <br />
-            <Button variant="dark">Sign In</Button>
+            <Button type="submit" variant="dark">
+              Sign In
+            </Button>
           </fieldset>
         </form>
       </div>
