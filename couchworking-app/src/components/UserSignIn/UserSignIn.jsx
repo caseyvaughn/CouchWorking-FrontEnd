@@ -16,10 +16,10 @@ const UserSignIn = () => {
   const [toggle, setToggle] = useState(false)
 
   const handleTextInput = (e) => {
-    const {id, value} = e.target
+    const {name, value} = e.target
     setUser((prevUser) => ({
       ...prevUser,
-      [id]: value,
+      [name]: value,
     }))
   }
 
@@ -75,7 +75,7 @@ const UserSignIn = () => {
           <fieldset className={field}>
             <legend className="legend1">Sign In</legend>
             <input
-              id="username"
+              name="username"
               value={user.username}
               placeholder="username"
               onChange={(e) => {
@@ -84,7 +84,7 @@ const UserSignIn = () => {
             ></input>
             <br />
             <input
-              id="password"
+              name="password"
               value={user.password}
               placeholder="password"
               onChange={(e) => {

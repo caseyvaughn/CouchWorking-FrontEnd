@@ -133,7 +133,9 @@ const UserSignUp = () => {
             }} />
           </Form.Group> */}
 
-          <Button variant="dark">Create Account</Button>
+          <Button type="submit" variant="dark">
+            Create Account
+          </Button>
         </Form>
       </Display>
     </div>
