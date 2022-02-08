@@ -1,15 +1,20 @@
 .form-container {
   display: flex;
-  justify-content: center;
-  position: absolute;
+  position:fixed;
+  justify-content: center; 
+  top: 25%; 
+  left: 25%;
+  right: 25%;
+  bottom: 10%;
 }
 
 .fieldset2 {
-  width: 400px;
+  width: 55vw;
+  max-width: 450px;
   border-radius: 15px;
   background-color: rgb(253, 253, 253);
   font-size: 20px;
-  border: none;
+  border: 2px solid rgb(122, 102, 102);
   color: rgb(122, 102, 102);
 }
 
@@ -38,7 +43,8 @@
 } */
 
 .form-container input {
-  width: 375px;
+  width: 50vw;
+  max-width: 420px;
   margin-top: 10px;
   border-radius: 5px;
   border: 1px solid rgb(218, 216, 216);
@@ -55,3 +61,4 @@
   color: #c3c3e5;
   border-bottom: 1.2px solid #c3c3e5;
 }
+

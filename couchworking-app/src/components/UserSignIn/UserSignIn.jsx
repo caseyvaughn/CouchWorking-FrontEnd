@@ -54,9 +54,9 @@ const UserSignIn = () => {
   }
 
   if (toggle === false) {
-    field = "fieldset1"
+    (field = "fieldset1")
   } else {
-    field = "fieldset2"
+    (field = "fieldset2")
   }
 
   return (
@@ -67,12 +67,13 @@ const UserSignIn = () => {
         variant="light"
       >Sign In
       </Button>
+
       <div className="form-container">
         <form
           onSubmit={(e) => {
             handleSubmit(e)
           }}
-        >
+        >   
           <fieldset className={field}>
             <legend className="legend1">Sign In</legend>
             <input
