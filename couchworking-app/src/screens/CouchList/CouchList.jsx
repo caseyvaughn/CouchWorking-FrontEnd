@@ -35,10 +35,6 @@ export default function CouchList() {
       setSearchParams(asc(searchParams))
     } else if (type === "location-descending") {
       setSearchParams(desc(searchParams))
-      // } else if (type === 'title-ascending') {
-      //   setSearchParams(asc(searchParams))
-      // } else if (type === 'title-descending') {
-      //   setSearchParams(desc(searchParams))
     } else {
       type = "No results match"
     }
@@ -55,9 +51,7 @@ export default function CouchList() {
     setSearchParams(searchResults)
     setSort(true)
   }
-
-  // const user = localStorage.getItem("token")
-
+  
   const handleSubmit = (e) => e.preventDefault()
 
   return (

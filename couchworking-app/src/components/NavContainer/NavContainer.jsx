@@ -4,20 +4,11 @@ import "./NavBar.css"
 import UserSignIn from "../UserSignIn/UserSignIn"
 import SignOut from "../SIgnOut/SignOut"
 
-// const userLinks = (
-//     <div>
-//         <Nav.Link className="link" to ="/create">Create a Post</Nav.Link>
-//         <Nav.Link className="link" to ="/">Sign Out</Nav.Link>
-//     </div>
-// )
-
 const newUserLinks = (
   <div className="nav-links mr-auto" style={{display: "flex"}}>
     <UserSignIn />
     <Nav.Link as={Link} to="/sign-up">Sign Up</Nav.Link>
     <Nav.Link as={Link} to="/couches">View Listings</Nav.Link>
-    {/* <Nav.Link className="link" href="/sign-up">Sign Up</Nav.Link>
-    <Nav.Link className="link" href="/couches">View Listings</Nav.Link> */}
     <SignOut />
   </div>
 )
@@ -31,9 +22,7 @@ const NavContainer = ({user}) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          {/* {user && <div className="user-link">Hello {user.username}</div>} */}
           {newUserLinks}
-          {/* {user ? userLinks : newUserLinks}      */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
