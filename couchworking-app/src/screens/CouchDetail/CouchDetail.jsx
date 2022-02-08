@@ -19,13 +19,10 @@ export default function CouchDetail(props) {
           Authorization: `${localStorage.getItem("token")}`,
         },
       })
-      // console.log(res.data)
       setCouch(res.data)
     }
     fetchCouch()
   }, [id])
-  // console.log(auth)
-  ///add if block for if couch does not exist
 
   const routeAllCouches = () => {
     navigate("/couches")
@@ -57,7 +54,6 @@ export default function CouchDetail(props) {
           <Row style={{display: "flex", justifyContent: "center"}}>
             <Col xs="12" md="6">
               <h3>Please log in to view the details for this couch.</h3>
-              {/* <img className="detail-photo" src={couch?.image_URL} alt={couch?.title} /> */}
             </Col>
             <Col xs="12" md="6" className="couch-info">
               <h1>{couch?.title}</h1>

@@ -48,7 +48,6 @@ const UserSignUp = () => {
           navigate("/")
         })
     }
-    // await axios.post(`${baseURL}user-api/sign-up`, newUser);
   }
 
   return (
@@ -131,7 +130,6 @@ const UserSignUp = () => {
               handleTextInput(e)
             }} />
           </Form.Group>
-
 
           <Button type="submit" variant="dark">
             Create Account
