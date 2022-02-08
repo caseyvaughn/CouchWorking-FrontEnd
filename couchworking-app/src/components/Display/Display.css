@@ -1,6 +1,16 @@
 .display-content {
     margin-top: 50px;
     margin-bottom: 80px; 
+    -webkit-filter: grayscale(0) blur(0);
+	filter: grayscale(0) blur(0);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    
+}
+
+.display-blur {
+    -webkit-filter: grayscale(100%) blur(3px);
+	filter: grayscale(100%) blur(3px);
 }
 
 @media only screen and (max-width: 768px) {
