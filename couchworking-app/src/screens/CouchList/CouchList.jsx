@@ -56,7 +56,7 @@ export default function CouchList() {
     setSort(true)
   }
 
-  const user = localStorage.getItem("token")
+  // const user = localStorage.getItem("token")
 
   const handleSubmit = (e) => e.preventDefault()
 
