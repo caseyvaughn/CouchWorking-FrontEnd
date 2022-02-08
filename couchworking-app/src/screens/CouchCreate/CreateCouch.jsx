@@ -6,7 +6,10 @@ import Display from "../../components/Display/Display"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 
+const user = localStorage.getItem("username")
+
 const default_input = {
+  username: user,
   title: "",
   description: "",
   location: "",
