@@ -15,9 +15,9 @@ body {
   margin: 10px;
   border-radius: 20px;
   border: 5px solid white;
-  -moz-transition: all .5s;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -moz-transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .card-title {
@@ -35,4 +35,8 @@ body {
 .card:hover {
   transform: scale(1.03);
   box-shadow: 10px 10px 5px grey;
+}
+
+.couches-grid {
+  margin-top: 15px;
 }
