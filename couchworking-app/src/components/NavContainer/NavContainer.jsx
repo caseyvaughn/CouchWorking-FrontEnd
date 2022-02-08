@@ -1,4 +1,5 @@
-import {Navbar, Nav} from "react-bootstrap"
+import { Navbar, Nav } from "react-bootstrap"
+import { Link } from "react-router-dom"
 import "./NavBar.css"
 import UserSignIn from "../UserSignIn/UserSignIn"
 import SignOut from "../SIgnOut/SignOut"
@@ -13,9 +14,10 @@ import SignOut from "../SIgnOut/SignOut"
 const newUserLinks = (
   <div className="nav-links mr-auto" style={{display: "flex"}}>
     <UserSignIn />
-    <Nav.Link className="link" href="/sign-up">Sign Up</Nav.Link>
-  
-    <Nav.Link className="link" href="/couches">View Listings</Nav.Link>
+    <Nav.Link as={Link} to="/sign-up">Sign Up</Nav.Link>
+    <Nav.Link as={Link} to="/couches">View Listings</Nav.Link>
+    {/* <Nav.Link className="link" href="/sign-up">Sign Up</Nav.Link>
+    <Nav.Link className="link" href="/couches">View Listings</Nav.Link> */}
     <SignOut />
   </div>
 )

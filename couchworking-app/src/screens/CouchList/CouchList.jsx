@@ -22,6 +22,7 @@ export default function CouchList() {
       const res = await axios.get(`${baseURL}couch-api/couches`)
       console.log(res.data)
       setCouches(res.data.data)
+      setSearchParams(res.data.data)
     }
     fetchCouches()
   }, [])
@@ -49,7 +50,8 @@ export default function CouchList() {
   }
 
   const handleSearch = (e) => {
-    const searchResults = couches.filter((couch) => couch.name.toLowerCase().includes(e.target.value.toLowerCase()))
+    const searchResults = couches.filter((couch) => 
+    couch.location.toLowerCase().includes(e.target.value.toLowerCase()))
     setSearchParams(searchResults)
     setSort(true)
   }
@@ -61,11 +63,11 @@ export default function CouchList() {
   return (
     <div>
       <Display>
-        {/* <Search onSubmit={handleSubmit} handleSearch={handleSearch} /> */}
+        <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
         <Sort onSubmit={handleSubmit} handleSort={handleSort} />
         <Container className="grid">
           <Row>
-            {couches.map((couch) => {
+            {searchParams.map((couch) => {
               return (
                 <Col xs="12" sm="6" lg="4" xl="3" style={{display: "flex", justifyContent: "center"}}>
                   <Link to={`/couch/${couch._id}`} style={{textDecoration: "none"}}>
