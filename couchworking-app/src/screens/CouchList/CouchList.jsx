@@ -56,7 +56,7 @@ export default function CouchList() {
     setSort(true)
   }
 
-  const user = localStorage.getItem("token")
+  // const user = localStorage.getItem("token")
 
   const handleSubmit = (e) => e.preventDefault()
 
@@ -65,7 +65,7 @@ export default function CouchList() {
       <Display>
         <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
         <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-        <Container className="grid">
+        <Container className="couches-grid">
           <Row>
             {searchParams.map((couch) => {
               return (

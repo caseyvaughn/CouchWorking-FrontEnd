@@ -9,10 +9,8 @@ const baseURL = "https://couch-working.herokuapp.com/"
 export default function CouchDetail(props) {
   const [couch, setCouch] = useState(null)
   const {id} = useParams()
-  const auth = `Headers:
-  {Authorization: ${localStorage.getItem("token")}}`
   const user = localStorage.getItem("token")
-
+  const username = localStorage.getItem("username")
   const navigate = useNavigate()
   useEffect(() => {
     const fetchCouch = async () => {
@@ -25,7 +23,7 @@ export default function CouchDetail(props) {
       setCouch(res.data)
     }
     fetchCouch()
-  }, [])
+  }, [id])
   // console.log(auth)
   ///add if block for if couch does not exist
 
@@ -38,8 +36,11 @@ export default function CouchDetail(props) {
   }
 
   const handleDelete = async () => {
+    console.log(couch)
     if (!user) {
       alert("Please sign in to delete your couch")
+    } else if (username !== couch.username) {
+      alert("Can not delete another user's couch")
     } else {
       await axios.delete(`${baseURL}couch-api/delete/${id}`, {
         headers: {

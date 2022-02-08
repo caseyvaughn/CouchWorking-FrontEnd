@@ -1,9 +1,9 @@
 import axios from "axios"
 import {useState} from "react"
-import { useNavigate } from "react-router-dom"
-import Form from 'react-bootstrap/Form'
+import {useNavigate} from "react-router-dom"
+import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
-import Display from '../../components/Display/Display';
+import Display from "../../components/Display/Display"
 import "./UserSignUp.css"
 
 const default_User = {
@@ -31,29 +31,35 @@ const UserSignUp = () => {
 
   const handleSubmit = async (e) => {
     if (newUser.password !== newUser.confirmPassword) {
-      e.preventDefault();
+      e.preventDefault()
       alert("Passwords must match - please change and try again!")
     } else {
-    e.preventDefault()
-    await axios({
-      method: "post",
-      url: `${baseURL}user-api/sign-up`,
-      data: newUser,
-    })
-      .then(() => {
-        navigate("/")
+      e.preventDefault()
+      await axios({
+        method: "post",
+        url: `${baseURL}user-api/sign-up`,
+        data: newUser,
       })
-      .catch((error) => {
-        console.log(error)
-        navigate("/")
-      })}
+        .then(() => {
+          navigate("/")
+        })
+        .catch((error) => {
+          console.log(error)
+          navigate("/")
+        })
+    }
     // await axios.post(`${baseURL}user-api/sign-up`, newUser);
   }
 
   return (
     <div>
       <Display>
-        <Form className="signup-form" onSubmit={(e) => { handleSubmit(e) }}>
+        <Form
+          className="signup-form"
+          onSubmit={(e) => {
+            handleSubmit(e)
+          }}
+        >
           <Form.Group>
             <Form.Label>Username</Form.Label>
             <Form.Control
@@ -61,50 +67,60 @@ const UserSignUp = () => {
               value={newUser.username}
               placeholder="Username"
               onChange={(e) => {
-              handleTextInput(e)
-            }}/>
+                handleTextInput(e)
+              }}
+            />
           </Form.Group>
 
           <Form.Group>
             <Form.Label>First Name</Form.Label>
-              <Form.Control id="firstName"
+            <Form.Control
+              id="firstName"
               value={newUser.firstName}
               placeholder="First Name"
               onChange={(e) => {
-              handleTextInput(e)
-            }}/>
+                handleTextInput(e)
+              }}
+            />
           </Form.Group>
 
           <Form.Group>
             <Form.Label>Last Name</Form.Label>
-            <Form.Control id="lastName"
-            value={newUser.lastName}
-            placeholder="Last Name"
-            onChange={(e) => {
-              handleTextInput(e)
-            }}/>
+            <Form.Control
+              id="lastName"
+              value={newUser.lastName}
+              placeholder="Last Name"
+              onChange={(e) => {
+                handleTextInput(e)
+              }}
+            />
           </Form.Group>
 
           <Form.Group>
             <Form.Label>Email</Form.Label>
-            <Form.Control id="email"
-            value={newUser.email}
-            placeholder="Email"
-            onChange={(e) => {
-              handleTextInput(e)
-            }}/>
+            <Form.Control
+              id="email"
+              value={newUser.email}
+              placeholder="Email"
+              onChange={(e) => {
+                handleTextInput(e)
+              }}
+            />
           </Form.Group>
 
           <Form.Group>
             <Form.Label>Password</Form.Label>
-            <Form.Control  id="password"
-            value={newUser.password}
-            placeholder="Password"
-            type = "password"
-            onChange={(e) => {
-              handleTextInput(e)
-            }}/>
+            <Form.Control
+              id="password"
+              value={newUser.password}
+              placeholder="Password"
+              type="password"
+              onChange={(e) => {
+                handleTextInput(e)
+              }}
+            />
           </Form.Group>
+
           <Form.Group>
           <Form.Label>Confirm Password</Form.Label>
             <Form.Control id="confirmPassword"
@@ -115,11 +131,15 @@ const UserSignUp = () => {
               handleTextInput(e)
             }} />
           </Form.Group>
-    
-          <Button variant="dark">Create Account</Button>
+
+
+          <Button type="submit" variant="dark">
+            Create Account
+          </Button>
+
         </Form>
       </Display>
-      </div>
+    </div>
   )
 }
 
