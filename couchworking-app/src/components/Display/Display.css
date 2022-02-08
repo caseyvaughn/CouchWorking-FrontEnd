@@ -3,6 +3,11 @@
     margin-bottom: 80px; 
 }
 
+.display-blur {
+    -webkit-filter: grayscale(100%) blur(3px);
+	filter: grayscale(100%) blur(3px);
+}
+
 @media only screen and (max-width: 768px) {
     .display-content {
         margin-bottom: 100px;

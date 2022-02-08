@@ -1,8 +1,8 @@
 import axios from "axios"
-import { useState } from "react"
+import jwtDecode from "jwt-decode"
+import {useState} from "react"
 import Button from "react-bootstrap/Button"
 import "./UserSignIn.css"
-import {useEffect} from "react"
 
 const default_User = {
   username: "",
@@ -16,10 +16,10 @@ const UserSignIn = () => {
   const [toggle, setToggle] = useState(false)
 
   const handleTextInput = (e) => {
-    const {id, value} = e.target
+    const {name, value} = e.target
     setUser((prevUser) => ({
       ...prevUser,
-      [id]: value,
+      [name]: value,
     }))
   }
 
@@ -32,12 +32,12 @@ const UserSignIn = () => {
     })
       .then((response) => {
         const token = response.data.data
-        localStorage.setItem("token", token)
         if (token === undefined) {
           alert("Error signing in. Please try again")
         } else {
           alert("Login successful")
           localStorage.setItem("token", token)
+          localStorage.setItem("username", user.username)
           setToggle(false)
         }
       })
@@ -54,29 +54,34 @@ const UserSignIn = () => {
   }
 
   if (toggle === false) {
-    field = "fieldset1"
+    (field = "fieldset1")
   } else {
-    field = "fieldset2"
+    (field = "fieldset2")
   }
 
   return (
     <div>
       <Button
         className="signin-button"
-        onClick={(e) => {toggleClass(e)}}
+        onClick={(e) => {
+          toggleClass(e)
+        }}
         variant="light"
-      >Sign In
+      >
+        Sign In
       </Button>
+
       <div className="form-container">
+
         <form
           onSubmit={(e) => {
             handleSubmit(e)
           }}
-        >
+        >   
           <fieldset className={field}>
             <legend className="legend1">Sign In</legend>
             <input
-              id="username"
+              name="username"
               value={user.username}
               placeholder="username"
               onChange={(e) => {
@@ -85,7 +90,7 @@ const UserSignIn = () => {
             ></input>
             <br />
             <input
-              id="password"
+              name="password"
               value={user.password}
               placeholder="password"
               onChange={(e) => {
@@ -93,7 +98,9 @@ const UserSignIn = () => {
               }}
             ></input>
             <br />
-            <Button variant="dark">Sign In</Button>
+            <Button type="submit" variant="dark">
+              Sign In
+            </Button>
           </fieldset>
         </form>
       </div>
