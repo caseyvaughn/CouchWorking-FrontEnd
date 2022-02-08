@@ -1,12 +1,11 @@
 import axios from "axios"
-import jwtDecode from "jwt-decode"
 import {useState} from "react"
 import Button from "react-bootstrap/Button"
 import "./UserSignIn.css"
 
 const default_User = {
   username: "",
-  password: "",
+  password: "", 
 }
 
 const baseURL = "https://couch-working.herokuapp.com/"

@@ -9,8 +9,6 @@ const baseURL = "https://couch-working.herokuapp.com/"
 export default function CouchDetail(props) {
   const [couch, setCouch] = useState(null)
   const {id} = useParams()
-  const auth = `Headers:
-  {Authorization: ${localStorage.getItem("token")}}`
   const user = localStorage.getItem("token")
   const username = localStorage.getItem("username")
   const navigate = useNavigate()
@@ -25,7 +23,7 @@ export default function CouchDetail(props) {
       setCouch(res.data)
     }
     fetchCouch()
-  }, [])
+  }, [id])
   // console.log(auth)
   ///add if block for if couch does not exist
 
