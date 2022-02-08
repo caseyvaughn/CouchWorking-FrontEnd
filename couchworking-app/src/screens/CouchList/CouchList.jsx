@@ -65,7 +65,7 @@ export default function CouchList() {
       <Display>
         <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
         <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-        <Container className="grid">
+        <Container className="couches-grid">
           <Row>
             {searchParams.map((couch) => {
               return (

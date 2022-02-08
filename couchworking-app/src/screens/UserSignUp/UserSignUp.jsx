@@ -121,7 +121,6 @@ const UserSignUp = () => {
             />
           </Form.Group>
 
-          {/* Form input for confirm password POST MVP
           <Form.Group>
           <Form.Label>Confirm Password</Form.Label>
             <Form.Control id="confirmPassword"
@@ -131,11 +130,13 @@ const UserSignUp = () => {
             onChange={(e) => {
               handleTextInput(e)
             }} />
-          </Form.Group> */}
+          </Form.Group>
+
 
           <Button type="submit" variant="dark">
             Create Account
           </Button>
+
         </Form>
       </Display>
     </div>

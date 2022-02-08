@@ -64,7 +64,7 @@ export default function CouchEdit() {
     <div>
       <Display>
         {/* <h2>Thank you for updating your CouchWorking place!</h2> */}
-        <Form onSubmit={handleSubmit}>
+        <Form className="edit-form" onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label>Title</Form.Label>
             <Form.Control
