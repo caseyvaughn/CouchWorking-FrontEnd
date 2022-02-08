@@ -6,7 +6,10 @@ import Display from "../../components/Display/Display"
 import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button"
 
+const user = localStorage.getItem("username")
+
 const default_input = {
+  username: user,
   title: "",
   description: "",
   location: "",
@@ -47,7 +50,12 @@ export default function CreateCouch() {
   return (
     <div>
       <Display>
+<<<<<<< HEAD
         <Form onSubmit={handleSubmit}>
+=======
+        {/* <h2>Thank you for offering your CouchWorking place!</h2> */}
+        <Form className="create-form" onSubmit={handleSubmit}>
+>>>>>>> 7846d5e9493a54805def5ed748aed91213fff8ac
           <Form.Group>
             <Form.Label>Title</Form.Label>
             <Form.Control type="text" value={input.title} id="title" placeholder="Enter title" onChange={handleTextInput} required />

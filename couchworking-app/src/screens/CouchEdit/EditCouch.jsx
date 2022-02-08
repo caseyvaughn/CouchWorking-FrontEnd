@@ -7,6 +7,7 @@ import axios from "axios"
 import "./EditCouch.css"
 
 const default_input = {
+  username: "",
   title: "",
   description: "",
   location: "",
@@ -34,8 +35,11 @@ export default function CouchEdit() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     const user = localStorage.getItem("token")
+    const username = localStorage.getItem("username")
     if (!user) {
       alert("Please sign in to edit your couch")
+    } else if (username !== input.username) {
+      alert("Can not edit another user's couch")
     } else {
       const fields = input
       await axios.put(`https://couch-working.herokuapp.com/couch-api/update/${id}`, fields, {
@@ -60,7 +64,7 @@ export default function CouchEdit() {
     <div>
       <Display>
         {/* <h2>Thank you for updating your CouchWorking place!</h2> */}
-        <Form onSubmit={handleSubmit}>
+        <Form className="edit-form" onSubmit={handleSubmit}>
           <Form.Group>
             <Form.Label>Title</Form.Label>
             <Form.Control
